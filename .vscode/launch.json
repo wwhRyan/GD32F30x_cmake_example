@@ -1,0 +1,22 @@
+{
+    // 使用 IntelliSense 了解相关属性。 
+    // 悬停以查看现有属性的描述。
+    // 欲了解更多信息，请访问: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Cortex Debug",
+            "cwd": "${workspaceFolder}",
+            "executable": "build/Examples/ADC/ADC0_ADC1_regular_parallel/ADC0_ADC1_regular_parallel.elf",
+            "request": "launch",
+            "type": "cortex-debug",
+            // "runToEntryPoint": "main",
+            "servertype": "openocd",
+            "configFiles": [
+                "cmsis-dap.cfg",
+                "openocd_target.cfg"
+            ],
+            "svdFile": "GD32F30x_HD.svd",
+        }
+    ]
+}
