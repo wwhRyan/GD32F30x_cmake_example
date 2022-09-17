@@ -32,7 +32,7 @@ add_definitions(-DGD32F30X_HD)
 add_compile_options(
   -mcpu=cortex-m4
   -mthumb
-  -mfloat-abi=hard
+  -mfloat-abi=softfp
   -fno-builtin
   -fno-strict-aliasing
   -fdata-sections
@@ -45,9 +45,9 @@ add_compile_options(
   $<$<CONFIG:RelWithDebInfo>:-O3>)
 
 add_link_options(
-  -mcpu=cortex-m4
   -mthumb
-  -mfloat-abi=hard
+  -mcpu=cortex-m4
+  -mfloat-abi=softfp
   -Wl,--gc-sections
   -flto
   -specs=nano.specs
